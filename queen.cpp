@@ -1,0 +1,29 @@
+#pragma once
+#include "uiInteract.h"   // for Interface
+#include "uiDraw.h"		  // for draw*
+#include "point.h"
+#include "piece.h"
+#include <set>            // for STD::SET
+#include <cassert>        // for ASSERT
+#include <fstream>        // for IFSTREAM
+#include <string>         // for STRING
+using namespace std;
+
+Queen::Queen(int r, int c, bool white) {}
+
+
+virtual char Queen::getLetter() override {
+	if (white == true) {
+		return 'q';
+	}
+	else
+		return 'Q';
+}
+
+bool Queen::isWhite() override {
+	if (white == true) {
+		return true;
+	}
+	else
+		return false; 
+}
